@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import {Toolbar} from "./components/Toolbar/Toolbar";
+import {Home} from "./components/Home/Home";
 export default function App() {
     const css = `
         body{
@@ -8,18 +9,17 @@ export default function App() {
             color: #FEFEFE;
             font-family: monospace;
         }
-        .title{
-            font-size: 33px;
-            color: red;
+        .app{
+            margin: 0px;
         }
     `
     return (
 
-        <div>
+        <div className={'app'}>
             <style>
                 {css}
             </style>
-<Toolbar/>
+            <Toolbar/>
             {/* Routes nest inside one another. Nested route paths build upon
             parent route paths, and nested route elements render inside
             parent route elements. See the note about <Outlet> below. */}
@@ -48,7 +48,7 @@ function Layout() {
           share across all the pages on your site, like navigation. */}
 
 
-            <hr />
+
 
             {/* An <Outlet> renders whatever child route is currently active,
           so you can think about this <Outlet> as a placeholder for
@@ -58,13 +58,6 @@ function Layout() {
     );
 }
 
-function Home() {
-    return (
-        <div>
-            <h2>Home</h2>
-        </div>
-    );
-}
 
 function About() {
     return (

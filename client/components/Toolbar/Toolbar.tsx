@@ -13,6 +13,7 @@ export class Toolbar extends React.Component<any, any>{
                     flex-wrap: nowrap;
                     flex-direction: row;
                     justify-content: space-between;
+                    border-bottom: 3px solid #47484B;
                 }
             .toolbar-btn{
                     border: none;
@@ -22,9 +23,10 @@ export class Toolbar extends React.Component<any, any>{
                     cursor: pointer;
                     margin: 5px;
                     padding: 5px;
+                    font-size: 16px;
                 }
             .toolbar-btn:hover{
-                    color: cornflowerblue;
+                    color: #19F4D6;
         
                 }
             .toolbar-btn:focus{
@@ -84,7 +86,9 @@ export class Toolbar extends React.Component<any, any>{
                         Email
                     </button>
                 </nav>
+
             </div>
+
         );
     }
 

@@ -1,7 +1,8 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
     name: 'client',
     entry: {
@@ -35,7 +36,6 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                exclude: "/client",
                 use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
         ],
@@ -43,6 +43,9 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new WebpackManifestPlugin(),
+        new CopyPlugin({
+            patterns: [{ context: 'client', from: 'assets', to: 'assets' }],
+        }),
         new MiniCssExtractPlugin()
     ],
 }
