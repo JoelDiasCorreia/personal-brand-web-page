@@ -4,7 +4,8 @@
   "scripts": {
     "build:server": "webpack --config webpack.config.server.js",
     "build:client": "webpack --config webpack.config.client.js",
-    "start": "node ./dist/server.js"
+    "start": " node ./dist/server.js",
+    "serve": "webpack --config webpack.config.client.js && webpack --config webpack.config.server.js && node ./dist/server.js"
   },
   "author": "Joel Dias Correia",
   "license": "ISC",
@@ -14,6 +15,9 @@
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
     "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "style-loader": "^3.3.1",
     "ts-loader": "^9.3.0",
     "typescript": "^4.7.2",
     "webpack": "^5.72.1",
