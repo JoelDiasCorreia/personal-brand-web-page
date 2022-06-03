@@ -10,7 +10,7 @@ module.exports = {
     mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js', cssFilename: "dist/static/client.css"
+        filename: '[name].js',
     },
     resolve: {
         extensions: ['.ts', '.tsx'],

@@ -14,5 +14,9 @@
     "strict": true,
     "strictNullChecks": true,
     "noImplicitAny": true
-  }
+  },
+  "exclude": [
+    "client",
+    "client/**/*.css"
+  ]
 }

@@ -6,6 +6,7 @@
     "jsx": "react", // compile JSX to React.createElement statements for browser
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true, // allow imports of modules in ES format
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "strict": true,

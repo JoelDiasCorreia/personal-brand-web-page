@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     name: 'client',
     entry: {
-        client: path.resolve(__dirname, 'client/client.tsx'),
+        client: path.resolve(__dirname, 'client/Client.tsx'),
     },
     mode: 'production',
     output: {
@@ -35,6 +35,7 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
+                exclude: "/client",
                 use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
         ],

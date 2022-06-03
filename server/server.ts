@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const React = require("react");
 const ReactDOMServer = require("react-dom/server");
-import { App } from '../client/components/app';
+import { App } from '../client/components/App';
 const server = express()
 
 
@@ -20,7 +20,7 @@ const manifest = fs.readFileSync(
     path.join(__dirname, 'static/manifest.json'),
     'utf-8'
 )
-const assets = JSON.parse(manifest)
+const assets = JSON.parse(manifest);
 
 server.get('/', (req:any, res:any) => {
     const component = ReactDOMServer.renderToString(React.createElement(App))
