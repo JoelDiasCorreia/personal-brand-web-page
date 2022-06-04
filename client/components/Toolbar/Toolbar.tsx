@@ -7,13 +7,19 @@ export class Toolbar extends React.Component<any, any>{
     render() {
         const css =`
             .toolbar{
+                    position: fixed;
+                    background: #2D2E32;
                     display: flex;
+                    width: 100%;
                     align-content: center;
                     align-items: center;
                     flex-wrap: nowrap;
                     flex-direction: row;
                     justify-content: space-between;
                     border-bottom: 3px solid #47484B;
+                    z-index:20;
+                    top: 0px;
+                    left: 0px;
                 }
             .toolbar-btn{
                     border: none;
@@ -79,9 +85,12 @@ export class Toolbar extends React.Component<any, any>{
                         </button>
                     </Link>
 
-                    <button className={'toolbar-btn'}>
-                        GitHub
-                    </button>
+                    <a href={"https://github.com/JoelDiasCorreia"} >
+
+                        <button className={'toolbar-btn'}>
+                            GitHub
+                        </button>
+                    </a>
                     <button className={'toolbar-btn'}>
                         Email
                     </button>

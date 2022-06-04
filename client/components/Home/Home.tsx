@@ -16,6 +16,7 @@ export class Home extends React.Component<any, any>{
             
             .home-fist-card{
                    margin: 25px;
+                   margin-top: 100px;
                     padding: 15px;
                     position: absolute;
                     z-index: 10;
@@ -52,14 +53,14 @@ export class Home extends React.Component<any, any>{
                 background-image: url( ${'/assets/code.jpg' } ) ;
                 background-repeat: no-repeat;
                 width: 100%;
-                min-height: 85vh;
+                min-height: 150vh;
                 opacity: 0.1;
                 z-index:9;
             }
                .home-joel-img{
                 position: absolute;
                 right: 100px;
-                top: 140px;
+                top: 200px;
                 background-image: url( ${'/assets/joel.jpg' } ) ;
                 background-repeat: round;
                 width: 350px;
