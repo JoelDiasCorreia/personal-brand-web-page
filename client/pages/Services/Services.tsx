@@ -14,6 +14,11 @@ export class Services extends React.Component<any, { services:Service[],rendered
                 {
                     picture:'/assets/undraw_programming.svg',
                     description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    title:'Consultoria',
+                },
+                {
+                    picture:'/assets/undraw_programming.svg',
+                    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
                     title:'Desarrollo Frontend',
                 },
                 {
@@ -60,8 +65,9 @@ export class Services extends React.Component<any, { services:Service[],rendered
                 align-items: center;
             }
             .service-card{
-                   width: 300px;
+                    width: 280px;
                     margin: 20px;
+                    min-height: 600px;
                     padding: 15px;
                     border: 3px solid;
                     display: flex;
