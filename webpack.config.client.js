@@ -6,7 +6,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
     name: 'client',
     entry: {
-        client: path.resolve(__dirname, 'client/App.tsx'),
+        client: path.resolve(__dirname, 'client/Index.tsx'),
     },
     mode: 'production',
     output: {
