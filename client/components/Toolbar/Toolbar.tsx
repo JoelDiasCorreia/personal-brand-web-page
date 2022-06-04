@@ -1,5 +1,8 @@
 import * as React from "react";
 import {Link} from "react-router-dom";
+import {BsGithub, BsLinkedin} from "react-icons/bs";
+import {HiOutlineMail} from "react-icons/hi";
+import {About} from "../About/About";
 export class Toolbar extends React.Component<any, any>{
     constructor(props:any) {
         super(props);
@@ -9,6 +12,8 @@ export class Toolbar extends React.Component<any, any>{
             .toolbar{
                     position: fixed;
                     background: #2D2E32;
+                    max-width: 100%;
+                    padding: auto;
                     display: flex;
                     width: 100%;
                     align-content: center;
@@ -47,56 +52,64 @@ export class Toolbar extends React.Component<any, any>{
             }
         `
         return (
-            <div className={'toolbar'}>
-                <style>
-                    {css}
-                </style>
-                <nav>
-                    <h1>Joel Dias Correia</h1>
-                </nav>
-                <nav>
-                    <Link to="/">
-                        <button className={'toolbar-btn'}>
-                            Home
-                        </button>
-                    </Link>
-                    <Link to="/portfolio">
-                        <button className={'toolbar-btn'}>
-                            Portfolio
-                        </button>
-                    </Link>
-                    <Link to="/services">
-                        <button className={'toolbar-btn'}>
-                            Services
-                        </button>
-                    </Link>
-                    <Link to="/contact">
-                        <button className={'toolbar-btn'}>
-                            Contact
-                        </button>
-                    </Link>
-                </nav>
-                <nav>
+            <div>
+                <div className={'toolbar'}>
+                    <style>
+                        {css}
+                    </style>
+                    <nav>
+                        <h1>{'<Joel Dias Correia/>'}</h1>
+                    </nav>
+                    <nav>
+                        <Link to="/">
+                            <button className={'toolbar-btn'}>
+                                Home
+                            </button>
+                        </Link>
+                        <Link to={'about'}>
+                            <button className={'toolbar-btn'}>
+                                About
+                            </button>
+                        </Link>
+                        <Link to="/services">
+                            <button className={'toolbar-btn'}>
+                                Services
+                            </button>
+                        </Link>
+                        <Link to="/contact">
+                            <button className={'toolbar-btn'}>
+                                Contact
+                            </button>
+                        </Link>
+                    </nav>
+                    <nav>
 
 
-                    <Link to="/nothing-here">
-                        <button className={'toolbar-btn'}>
-                            LinkedIn
-                        </button>
-                    </Link>
+                        <Link to="/nothing-here">
+                            <button className={'toolbar-btn'}>
+                                <BsLinkedin></BsLinkedin>
+                                LinkedIn
+                            </button>
+                        </Link>
 
-                    <a href={"https://github.com/JoelDiasCorreia"} >
+                        <a href={"https://github.com/JoelDiasCorreia"} >
 
-                        <button className={'toolbar-btn'}>
-                            GitHub
-                        </button>
-                    </a>
-                    <button className={'toolbar-btn'}>
-                        Email
-                    </button>
-                </nav>
+                            <button className={'toolbar-btn'}>
+                                <BsGithub></BsGithub>
+                                GitHub
+                            </button>
+                        </a>
+                        <a href={"mailto:dias.correia.joel@gmail.com"} >
+                            <button className={'toolbar-btn'}>
+                                <HiOutlineMail></HiOutlineMail>
+                            </button>
+                        </a>
 
+                    </nav>
+
+                </div>
             </div>
+
 
         );
     }
