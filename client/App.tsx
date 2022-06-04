@@ -1,8 +1,11 @@
 import * as React from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import {Toolbar} from "./components/Toolbar/Toolbar";
-import {Home} from "./components/Home/Home";
-import {Services} from "./components/Services/Services";
+import {Home} from "./pages/Home/Home";
+import {Services} from "./pages/Services/Services";
+import {Contact} from "./components/Contact/Contact";
+import {Footer} from "./components/Footer/Footer";
+import {About} from "./components/About/About";
 export default function App() {
     const css = `
         body{
@@ -28,16 +31,21 @@ export default function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path="about" element={<About />} />
-                    <Route path="dashboard" element={<Dashboard />} />
-                    <Route path="portfolio" element={<Dashboard />} />
                     <Route path="services" element={<Services />} />
-                    <Route path="contact" element={<Dashboard />} />
+                    <Route path="contact" element={<Contact />} />
                     {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for. */}
-                    <Route path="*" element={<NoMatch />} />
+                    <Route path="*" element={<Home />} />
                 </Route>
             </Routes>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <Footer></Footer>
         </div>
     );
 }
@@ -55,34 +63,6 @@ function Layout() {
           so you can think about this <Outlet> as a placeholder for
           the child routes we defined above. */}
             <Outlet />
-        </div>
-    );
-}
-
-
-function About() {
-    return (
-        <div>
-            <h2>About</h2>
-        </div>
-    );
-}
-
-function Dashboard() {
-    return (
-        <div>
-            <h2>Dashboard</h2>
-        </div>
-    );
-}
-
-function NoMatch() {
-    return (
-        <div>
-            <h2>Nothing to see here!</h2>
-            <p>
-                <Link to="/">Go to the home page</Link>
-            </p>
         </div>
     );
 }
