@@ -24,7 +24,7 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                exclude: "/client/components",
+                exclude: "/client/pages",
                 loader: 'ts-loader',
                 options: {
                     configFile: 'tsconfig.server.json',
