@@ -2,6 +2,7 @@ import * as React from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import {Toolbar} from "./components/Toolbar/Toolbar";
 import {Home} from "./components/Home/Home";
+import {Services} from "./components/Services/Services";
 export default function App() {
     const css = `
         body{
@@ -29,7 +30,7 @@ export default function App() {
                     <Route path="about" element={<About />} />
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="portfolio" element={<Dashboard />} />
-                    <Route path="services" element={<Dashboard />} />
+                    <Route path="services" element={<Services />} />
                     <Route path="contact" element={<Dashboard />} />
                     {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
