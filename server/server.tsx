@@ -8,7 +8,7 @@ import { StaticRouter } from "react-router-dom/server";
 
 const server = express();
 
-server.listen(3000, () => {
+server.listen( process.env.PORT || 80, () => {
     console.log(`Server running on http://localhost:3000`);
 })
 server.set('view engine', 'ejs')
