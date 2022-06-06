@@ -40,27 +40,27 @@ export function Footer(){
                 <div>
                     <Link to={'home'}>
                         <button className={'footer-pagemap-btn'}>
-                            Home
+                            Inicio
                         </button>
                     </Link>
                     <Link to={'portfolio'}>
                         <button className={'footer-pagemap-btn'}>
-                            Portfolio
+                            Portafolio
                         </button>
                     </Link>
                     <Link to={'services'}>
                         <button className={'footer-pagemap-btn'}>
-                            Services
+                            Servicios
                         </button>
                     </Link>
                     <Link to={'skills'}>
                         <button className={'footer-pagemap-btn'}>
-                            Skills
+                            Habilidades
                         </button>
                     </Link>
                     <Link to={'contact'}>
                         <button className={'footer-pagemap-btn'}>
-                            Contact
+                            Contacto
                         </button>
                     </Link>
 

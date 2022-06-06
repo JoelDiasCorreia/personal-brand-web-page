@@ -2,7 +2,6 @@ import * as React from "react";
 import {Link} from "react-router-dom";
 import {BsGithub, BsLinkedin} from "react-icons/bs";
 import {HiOutlineMail} from "react-icons/hi";
-import {About} from "../About/About";
 export class Toolbar extends React.Component<any, any>{
     constructor(props:any) {
         super(props);
@@ -63,22 +62,22 @@ export class Toolbar extends React.Component<any, any>{
                     <nav>
                         <Link to="/">
                             <button className={'toolbar-btn'}>
-                                Home
+                                Inicio
                             </button>
                         </Link>
                         <Link to={'about'}>
                             <button className={'toolbar-btn'}>
-                                About
+                                Sobre mi
                             </button>
                         </Link>
                         <Link to="/services">
                             <button className={'toolbar-btn'}>
-                                Services
+                                Servicios
                             </button>
                         </Link>
                         <Link to="/contact">
                             <button className={'toolbar-btn'}>
-                                Contact
+                                Contacto
                             </button>
                         </Link>
                     </nav>

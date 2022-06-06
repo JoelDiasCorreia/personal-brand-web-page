@@ -14,26 +14,26 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
             skills: [
                 {
                     name:'Prototipado de aplicaciones y paginas',
-                    description:'Realizo el diseño de interfaces de usuario para aplicaciones mobiles o de escritorio.'
+                    description:'Realizo prototipos animados de aplicaciones y paginas web'
                 },
                 {
                     name:'Diseño de interfaces',
-                    description:'Realizo el diseño de interfaces de usuario para aplicaciones mobiles o de escritorio.'
+                    description:'Realizo el diseño de interfaces de usuario para aplicaciones mobiles o de escritorio. '
                 },
                 {
                     name:'Control de versiones con Git',
-                    description:'Control de versiones de los proyectos a traves del sistema de repositorios  y control de cambios de Git.'
+                    description:'Control de versiones de los proyectos a traves del sistema de repositorios  y control de cambios de Git. Desarrollo en equipo sobre el sistema de ramas de Git.'
                 },
                 {
                     name:'Bases de Datos SQL y NoSQL',
-                    description:'Estoy Familiarizado a trabajar tanto con bases de datos relacionales como tambien con Bases de Datos no relacionales.'
+                    description:'Desarrollo con bases de datos relacionales como tambien con Bases de Datos no relacionales.'
                 },
                 {
                     name:'Desarrollo de Interfaces',
-                    description:'Desarrollar los prototipos en frameworks como React y Angular.'
+                    description:'Desarrollar los Interfaces de usuarios en tecnologias como React y Angular.'
                 },
                 {
-                    name:'Diseño y desarrollo de microservicios',
+                    name:'Diseño y desarrollo de Microservicios',
                     description:'Diseño de microservicios en multiples arquitecturas. En tecnologias como Spring-Boot o NodeJS.'
                 }
             ]
@@ -149,18 +149,18 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
                     <div className={'first-impression-view'}>
                         <div className={'home-fist-card'}>
                             <h1 className={'home-h1'}>
-                                Hello
+                                Hola
                             </h1>
                             <h1 className={'home-h1'}>
-                                Im <strong>Joel</strong>,
+                                Soy <strong>Joel</strong>,
                             </h1>
                             <h1 className={'home-h1'}>
-                                Web developer
+                                 Fullstack Dev
                             </h1>
-                            <h2 className={'home-h2'}>Full Stack Developer</h2>
+                            <h2 className={'home-h2'}>Desarrollador Fullstack </h2>
 
                             <button className={'home-cta-btn'}>
-                                View my CV
+                                Ver mi CV
                             </button>
 
                         </div>
@@ -168,7 +168,7 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
                     </div>
 
                     <div className={'skills'}>
-                        <h1>Skills</h1>
+                        <h1>Habilidades</h1>
                         <div className={'skills-flexbox'}>
 
                             {

@@ -13,22 +13,22 @@ export class Services extends React.Component<any, { services:Service[],rendered
             services:[
                 {
                     picture:'/assets/undraw_programming.svg',
-                    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    description:'Consultoria para el desarrollo de proyectos de software. Consultoria para el desarollo, actualización de paginas web. Consultas sobre arquitectura de microservicios.',
                     title:'Consultoria',
                 },
                 {
                     picture:'/assets/undraw_programming.svg',
-                    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    description:' Desarrollo de Frontend a partir de analisis funcional y diseño de interfaces. Implementacion de disintos patrones de diseño de POO.',
                     title:'Desarrollo Frontend',
                 },
                 {
                     picture:'/assets/undraw_design_notes.svg',
-                    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    description:'Diseño de User Experience, User Interface y prototipado de aplicaciones y paginas web.',
                     title:'Diseño UI',
                 },
                 {
                     picture:'/assets/undraw_server_cluster.svg',
-                    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                    description:'Desarrollo de micro servicios.',
                     title:'Desarrollo Backend',
                 }
             ],
@@ -116,7 +116,7 @@ export class Services extends React.Component<any, { services:Service[],rendered
                                 return <div className={'service-card'} key={i}>
                                     <h1> {service.title } </h1>
                                     {
-                                        this.state.rendered ?  <img src={service.picture}  width={'200px'} height={'200px'}></img>: <h2>foto</h2>
+                                        this.state.rendered ?  <img src={service.picture}  width={'200px'} height={'200px'}  alt={"foto de Joel"}></img>: <h2>foto</h2>
                                     }
 
                                     <p>
