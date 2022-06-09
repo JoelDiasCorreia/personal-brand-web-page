@@ -1,7 +1,6 @@
 const nodeExternals = require('webpack-node-externals')
 const CopyPlugin = require('copy-webpack-plugin')
-const path = require('path')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
 module.exports = {
     name: 'server',
     entry: {
@@ -30,17 +29,11 @@ module.exports = {
                     configFile: 'tsconfig.server.json',
                 },
             },
-            {
-                test: /\.css?$/,
-                exclude: "/client",
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
-            },
         ],
     },
     plugins: [
         new CopyPlugin({
             patterns: [{ context: 'server', from: 'views', to: 'views' }],
-        }),
-        new MiniCssExtractPlugin()
+        })
     ],
 }

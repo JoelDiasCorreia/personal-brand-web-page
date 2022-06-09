@@ -1,7 +1,6 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
     name: 'client',
@@ -34,10 +33,6 @@ module.exports = {
                     configFile: 'tsconfig.client.json',
                 },
             },
-            {
-                test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
-            },
         ],
     },
     plugins: [
@@ -45,7 +40,6 @@ module.exports = {
         new WebpackManifestPlugin(),
         new CopyPlugin({
             patterns: [{ context: 'client', from: 'assets', to: 'assets' }],
-        }),
-        new MiniCssExtractPlugin()
+        })
     ],
 }
