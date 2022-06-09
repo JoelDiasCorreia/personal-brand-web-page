@@ -63,24 +63,26 @@ export function Footer(){
                             Contacto
                         </button>
                     </Link>
-
-
-
-
                 </div>
                 <div>
-                    <button className={'footer-pagemap-btn'}>
-                        <BsLinkedin></BsLinkedin>
-                        LinkedIn
-                    </button>
-                    <button className={'footer-pagemap-btn'}>
-                        <BsGithub></BsGithub>
-                        GitHub
-                    </button>
-                    <button className={'footer-pagemap-btn'}>
-                        <HiOutlineMail></HiOutlineMail>
-                        Email
-                    </button>
+                    <a href={'https://www.linkedin.com/in/joeldiascorreia'}>
+                        <button className={'footer-pagemap-btn'}>
+                            <BsLinkedin></BsLinkedin>
+                            LinkedIn
+                        </button>
+                    </a>
+                    <a href={"https://github.com/JoelDiasCorreia"} >
+                        <button className={'footer-pagemap-btn'}>
+                            <BsGithub></BsGithub>
+                            GitHub
+                        </button>
+                    </a>
+                    <a href={"mailto:dias.correia.joel@gmail.com"} >
+                        <button className={'footer-pagemap-btn'}>
+                            <HiOutlineMail></HiOutlineMail>
+                            Email
+                        </button>
+                    </a>
                 </div>
             </div>
             <div className={'footer-flex-horizontal-wrap'}>
