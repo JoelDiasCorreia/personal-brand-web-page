@@ -133,6 +133,10 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
                 background: #2D2E32;
                 color: #19F4D6;
                 border: 2px solid #19F4D6;
+                -webkit-transition: all 0.15s ease-in;
+                -moz-transition: all 0.15s ease-in;
+                -o-transition: all 0.15s ease-in;
+                transition: all 0.15s ease-in;
             }
             .skill:hover{
                 color:  #FF004D;
