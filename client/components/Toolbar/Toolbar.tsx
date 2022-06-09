@@ -1,7 +1,6 @@
 import * as React from "react";
 import {Link} from "react-router-dom";
 import {BsGithub, BsLinkedin} from "react-icons/bs";
-import {HiOutlineMail} from "react-icons/hi";
 export class Toolbar extends React.Component<any, any>{
     constructor(props:any) {
         super(props);
@@ -83,24 +82,18 @@ export class Toolbar extends React.Component<any, any>{
                     </nav>
                     <nav>
 
-
-                        <Link to="/nothing-here">
+                        <a href={'https://www.linkedin.com/in/joeldiascorreia'}  target="_blank">
                             <button className={'toolbar-btn'}>
-                                <BsLinkedin></BsLinkedin>
+                                <BsLinkedin size={18}></BsLinkedin>
                                 LinkedIn
                             </button>
-                        </Link>
-
-                        <a href={"https://github.com/JoelDiasCorreia"} >
-
-                            <button className={'toolbar-btn'}>
-                                <BsGithub></BsGithub>
-                                GitHub
-                            </button>
                         </a>
-                        <a href={"mailto:dias.correia.joel@gmail.com"} >
+
+                        <a href={"https://github.com/JoelDiasCorreia"}   target="_blank">
+
                             <button className={'toolbar-btn'}>
-                                <HiOutlineMail></HiOutlineMail>
+                                <BsGithub size={18}></BsGithub>
+                                GitHub
                             </button>
                         </a>
 
