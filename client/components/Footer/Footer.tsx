@@ -6,17 +6,22 @@ export function Footer(){
     const css =`
             .footer-pagemap-btn{
                 font-family: monospace;
-                padding: 15px 25px;
-                margin: 15px;
-                padding: 15px 25px;
+                padding: 15px 10px;
                 margin: 15px;
                 background: #2D2E32;
                 color: #19F4D6;
                 cursor: pointer;
-                
+                border: 2px solid #2D2E32;
+                -webkit-transition: all 0.15s ease-in;
+                -moz-transition: all 0.15s ease-in;
+                -o-transition: all 0.15s ease-in;
+                transition: all 0.15s ease-in;
+        
             }
             .footer-pagemap-btn:hover{
-                border: 2px solid #19F4D6;
+                border: 2px solid #FF004D;
+                color:  #FF004D;
+
             }
             .footer-flex-horizontal-wrap{
                    display: flex;
