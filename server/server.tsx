@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const React = require("react");
+const bodyparser = require('body-parser');
 const ReactDOMServer = require("react-dom/server");
 import App from '../client/App';
 import { StaticRouter } from "react-router-dom/server";
@@ -20,7 +21,7 @@ const manifest = fs.readFileSync(
     'utf-8'
 )
 const assets = JSON.parse(manifest);
-
+server.use(bodyparser.json());
 server.get('/*', (req:any, res:any) => {
     const component = ReactDOMServer.renderToString(
         <StaticRouter location={req.url}>
@@ -28,4 +29,9 @@ server.get('/*', (req:any, res:any) => {
         </StaticRouter>
     );
     res.render('client', { assets, component });
+})
+
+server.post('/contacto', (req:any, res:any) => {
+    console.log(req.body)
+    res.status(200).send({value:'ok'})
 })
