@@ -120,8 +120,8 @@ export class Contact extends React.Component<
         };
         fetch('/contacto', requestOptions)
             .then(response => response.json())
-            .then(data => {
-                data.value === 'ok' ?  this.onSuccess(): alert('Ocurrió un error al enviar tu mensaje.');
+            .then(res => {
+                res.success ?  this.onSuccess(): alert('Ocurrió un error al enviar tu mensaje.');
             });
     }
     render() {
