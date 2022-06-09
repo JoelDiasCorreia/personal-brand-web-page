@@ -170,9 +170,12 @@ export class About extends React.Component<any, { experiencies:Experience[] }>{
                         <p>
                             Mis Hobbies son Skateboard, Bodyboard, andar en bici y los tatuajes.
                         </p>
-                        <button className={'about-cv-btn'}>
-                            Descarga mi CV
-                        </button>
+                        <a href={'/assets/CV - Joel Dias Correia_compressed.pdf' } target="_blank">
+                            <button className={'about-cv-btn'}>
+                                Ver mi CV
+                            </button>
+                        </a>
+
 
                     </div>
 

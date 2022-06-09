@@ -162,10 +162,12 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
                                  Fullstack Dev
                             </h1>
                             <h2 className={'home-h2'}>Desarrollador Fullstack </h2>
+                            <a href={'/assets/CV - Joel Dias Correia_compressed.pdf' } target="_blank">
+                                <button className={'home-cta-btn'}>
+                                    Ver mi CV
+                                </button>
+                            </a>
 
-                            <button className={'home-cta-btn'}>
-                                Ver mi CV
-                            </button>
 
                         </div>
                         <div className={'home-joel-img'}>  </div>
