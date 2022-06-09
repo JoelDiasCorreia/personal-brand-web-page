@@ -1,4 +1,5 @@
 import * as React from "react";
+import {Link} from "react-router-dom";
 interface Service {
     picture: string;
     description: string;
@@ -69,11 +70,15 @@ export class Services extends React.Component<any, { services:Service[],rendered
                     margin: 20px;
                     min-height: 600px;
                     padding: 15px;
-                    border: 3px solid;
+                    border: 3px solid #2D2E32;
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
                     align-items: center;
+                    -webkit-transition: all 200ms ease-in;
+                    -moz-transition: all 200ms ease-in;
+                    -o-transition: all 200ms ease-in;
+                    transition: all 200ms ease-in;
             }
             
             .service-card-btn{
@@ -94,12 +99,17 @@ export class Services extends React.Component<any, { services:Service[],rendered
             .service-card:hover{
                 background: #2D2E32;
                 color: #19F4D6;
-       
+                border: 3px solid #19F4D6;
             }
             .service-card-btn:hover{
                 background: #47484B;
                 color: #19F4D6;
                 border: 2px solid #19F4D6;
+            }
+            .service-skeleton-img{
+                width: 200px;
+                height: 200px;
+                background: #353536;
             }
         `;
         return (
@@ -116,15 +126,21 @@ export class Services extends React.Component<any, { services:Service[],rendered
                                 return <div className={'service-card'} key={i}>
                                     <h1> {service.title } </h1>
                                     {
-                                        this.state.rendered ?  <img src={service.picture}  width={'200px'} height={'200px'}  alt={"foto de Joel"}></img>: <h2>foto</h2>
+                                        this.state.rendered ?
+                                            <img src={service.picture}  width={'200px'} height={'200px'}  alt={"foto de Joel"}></img>
+                                            :
+                                            <div className={'service-skeleton-img'}> </div>
                                     }
 
                                     <p>
                                         {service.description }
                                     </p>
-                                    <button className={'service-card-btn'}>
-                                        Contactar
-                                    </button>
+                                    <Link to={"/contact?service=" +  service.title.toLowerCase() }>
+                                        <button className={'service-card-btn'}>
+                                            Contactar
+                                        </button>
+                                    </Link>
+
                                 </div>
                             })
                             :
