@@ -5,8 +5,8 @@
     "build:server": "webpack --config webpack.config.server.js",
     "build:client": "webpack --config webpack.config.client.js",
     "build:all": "webpack --config webpack.config.client.js && webpack --config webpack.config.server.js",
-    "build:serve": "webpack --config webpack.config.client.js && webpack --config webpack.config.server.js && node ./dist/server.js",
-    "start": " webpack --config webpack.config.client.js && webpack --config webpack.config.server.js && node ./dist/server.js"
+    "build:serve": "webpack --config webpack.config.client.js && webpack --config webpack.config.server.js && node  --max-old-space-size=4096 ./dist/server.js",
+    "start": " webpack --config webpack.config.client.js && webpack --config webpack.config.server.js && node  --max-old-space-size=4096 ./dist/server.js"
   },
   "author": "Joel Dias Correia ",
   "license": "ISC",
