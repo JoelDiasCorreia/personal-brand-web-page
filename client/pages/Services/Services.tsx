@@ -57,6 +57,11 @@ export class Services extends React.Component<any, { services:Service[],rendered
         const css = `
             .services{
                 margin-top: 100px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
             }
             .services-gallery{
                 display: flex;
@@ -64,47 +69,63 @@ export class Services extends React.Component<any, { services:Service[],rendered
                 justify-content: center;
                 flex-direction: row;
                 align-items: center;
+                max-width: 1100px;
             }
             .service-card{
-                    width: 280px;
-                    margin: 20px;
-                    min-height: 600px;
-                    padding: 15px;
-                    border: 3px solid #2D2E32;
-                    display: flex;
-                    justify-content: center;
-                    flex-direction: column;
-                    align-items: center;
-                    -webkit-transition: all 200ms ease-in;
-                    -moz-transition: all 200ms ease-in;
-                    -o-transition: all 200ms ease-in;
-                    transition: all 200ms ease-in;
+                z-index: 1;
+                width: 300px;
+                margin: 20px;
+                height: 520px;
+                padding: 15px 25px;
+                border: 3px solid #2D2E32;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                -webkit-transition: all 200ms ease-in;
+                -moz-transition: all 200ms ease-in;
+                -o-transition: all 200ms ease-in;
+                transition: all 200ms ease-in;
+                background: #2b2b2b;
+                border-radius: 20px;
+                border-bottom: 2px solid #19F4D6;
+                color: #19F4D6;
+                box-shadow: 0 1.6rem 2.4rem rgb(0 0 0 / 25%);
+                align-content: center;
+                justify-content: space-evenly;
             }
             
+            .service-card:hover{
+                color: #19F4D6;
+                border: 3px solid #19F4D6;
+                
+            }
             .service-card-btn{
                 padding: 15px 25px;
                 background: #2D2E32;
                 color: white;
-                border: 2px solid white;
+                border: 2px solid transparent;
+                border-bottom: 2px solid #FF004D;
                 font-family: monospace;
                 font-size: 18px;
                 cursor: pointer;
                 width: 100%;
+                border-radius: 10px;
+                background: #2b2b2b;
+                color: #19F4D6;
+
+                -webkit-transition: all 200ms ease-in;
+                -moz-transition: all 200ms ease-in;
+                -o-transition: all 200ms ease-in;
+                transition: all 200ms ease-in;
             }
-             .service-card-btn:focus{
+            .service-card-btn:focus{
                 background: #47484B;
                 color: #19F4D6;
                 border: 2px solid #19F4D6;
-            }
-            .service-card:hover{
-                background: #2D2E32;
-                color: #19F4D6;
-                border: 3px solid #19F4D6;
             }
             .service-card-btn:hover{
-                background: #47484B;
-                color: #19F4D6;
-                border: 2px solid #19F4D6;
+                color: #FF004D;
+                border: 2px solid #FF004D;
             }
             .service-skeleton-img{
                 width: 200px;

@@ -4,11 +4,15 @@ import {HiOutlineMail} from "react-icons/hi";
 import {BsGithub, BsLinkedin} from "react-icons/bs";
 export function Footer(){
     const css =`
+            .footer{
+                background: #2b2b2b;
+                z-index: 1;
+            }
             .footer-pagemap-btn{
-                font-family: monospace;
+                font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
                 padding: 15px 10px;
                 margin: 15px;
-                background: #2D2E32;
+                background: #2b2b2b;
                 color: #19F4D6;
                 cursor: pointer;
                 border: 2px solid #2D2E32;
@@ -16,6 +20,7 @@ export function Footer(){
                 -moz-transition: all 0.15s ease-in;
                 -o-transition: all 0.15s ease-in;
                 transition: all 0.15s ease-in;
+                font-size: 20px;
         
             }
             .footer-pagemap-btn:hover{
@@ -24,12 +29,13 @@ export function Footer(){
 
             }
             .footer-flex-horizontal-wrap{
-                   display: flex;
-                    flex-wrap: wrap;
-                    max-width: 1200px;
-                    flex-direction: row;
-                    margin: auto;
-                    justify-content: space-between;
+                z-index: 1;
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 1200px;
+                flex-direction: row;
+                margin: auto;
+                justify-content: space-between;
             }
         `
     return(

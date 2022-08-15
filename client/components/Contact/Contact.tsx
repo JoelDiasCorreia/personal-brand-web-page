@@ -133,12 +133,16 @@ export class Contact extends React.Component<
                 margin-top: 100px;
             }
             .contact-form{
+                background: #2b2b2b;
                 border: 2px solid #19F4D6;
+                border-radius: 20px;
+                
                 padding: 20px;
                 -webkit-transition: all 0.15s ease-in;
                 -moz-transition: all 0.15s ease-in;
                 -o-transition: all 0.15s ease-in;
                 transition: all 0.15s ease-in;
+                z-index: 1;
             }
             .flex-horizontal-wrapper{
                  display: flex;
@@ -152,6 +156,7 @@ export class Contact extends React.Component<
                 align-items: flex-start;
             }
             .contact-field label input{
+                z-index: 1;
                 background: #2D2E32;
                 color: white;
                 font-family: monospace;
@@ -160,13 +165,15 @@ export class Contact extends React.Component<
                 padding: 10px;
                 margin: 10px 0px;
                 width: 215px;
+                border-radius: 8px;
             }
             .contact-field label input:focus{
                 border: none;
                 
             }
             .contact-field label{
-                background: #2D2E32;
+                z-index: 1;
+                background: #2b2b2b;
                 color: white;
                 font-family: monospace;
                 font-size: 16px;
@@ -188,8 +195,10 @@ export class Contact extends React.Component<
                 min-width: 98%;
                 min-height: 200px;
                 max-height: 300px;
+                border-radius: 8px;
             }
             .submit-btn{
+                z-index: 1;
                 padding: 15px 25px;
                 margin: 20px;
                 background: #2D2E32;
@@ -198,6 +207,7 @@ export class Contact extends React.Component<
                 font-family: monospace;
                 font-size: 18px;
                 cursor: pointer;
+                border-radius: 8px;
             }
              .submit-btn:focus{
                 background: #47484B;

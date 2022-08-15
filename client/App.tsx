@@ -6,17 +6,33 @@ import {Services} from "./pages/Services/Services";
 import {Contact} from "./components/Contact/Contact";
 import {Footer} from "./components/Footer/Footer";
 import {About} from "./components/About/About";
+import { LanguageContext } from "./contexts/language";
 export default function App() {
+    const [isLanguage, setLanguage] = React.useState('EN');
     const css = `
         body{
             background: #2D2E32;
             color: #FEFEFE;
             font-family: monospace;
+            margin: 0px;
+        }
+        #root{
+            overflow-x: hidden;
         }
         .app{
             margin: 0px;
         }
-    `
+        p{
+            font-size: 20px;
+            line-height: 30px;
+            font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
+        }
+    `;
+
+    const switchLanguage = () => {
+        setLanguage(isLanguage === 'EN' ? 'ES' : 'EN');
+      };
+    
     return (
 
         <div className={'app'}>
@@ -27,25 +43,33 @@ export default function App() {
             {/* Routes nest inside one another. Nested route paths build upon
             parent route paths, and nested route elements render inside
             parent route elements. See the note about <Outlet> below. */}
+
+        <LanguageContext.Provider value={
+                {
+                    lang: isLanguage,
+                    switchLang: switchLanguage,
+                }
+            }>
             <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="services" element={<Services />} />
-                    <Route path="contact" element={<Contact />} />
-                    {/* Using path="*"" means "match anything", so this route
-                acts like a catch-all for URLs that we don't have explicit
-                routes for. */}
-                    <Route path="*" element={<Home />} />
-                </Route>
-            </Routes>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <Footer></Footer>
+                    <Route path="/" element={<Layout />}>
+                        
+                        <Route index element={<Home />} />
+                        <Route path="about" element={<About />} />
+                        <Route path="services" element={<Services />} />
+                        <Route path="contact" element={<Contact />} />
+                        <Route path="*" element={<Home />} />
+                    </Route>
+                </Routes>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <Footer></Footer>
+            <Toolbar />
+        </LanguageContext.Provider>
+  
         </div>
     );
 }
