@@ -36,35 +36,60 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
             startYear: 'Agosto 2021',
             endYear: 'hoy'
         },
-        // {
-        //     title: 'Freelance developer',
-        //     company: '2 Clientes',
-        //     description: 'Consultoria. Diseño de paginas web y aplicaciones web. ',
-        //     role: 'Desarrollador Fullstack & Diseñador UX/UI',
-        //     startYear: 'Nov 2020',
-        //     endYear: 'Nov 2021'
-        // },
         {
-            title: 'Asesor de Ciberseguridad',
+            title: 'Diseñador de Solución',
             company: 'Siemens Mobility Argentina',
-            description: 'Comunicación Remota en ingles con equipos distribuidos internacionalmente. Realizada reportes mensuales a presentar a el director ejecutivo y a la directoria de ciberseguridad de la region.',
-            role: 'Asesor de ciberseguridad',
+            description: 
+                `
+                Diseñar y planificar un proyecto para desarrollar una solución local para el mercado ferroviario local y regional. 
+                Comprender las necesidades de los clientes y sus pain-points. 
+                Creación de modelo de negocio de servicio. 
+                Reuniones con ingenieros para dar forma a la solución. 
+                Presentaciones mensuales al equipo local, CEO y CFO. 
+                Presentación a la Casa Matriz. 
+                Reajustar el proyecto después del feedback.
+                `,
+            role: 'Diseñador de Solución',
             startYear: 'Mar 2020',
             endYear: 'Ago 2021'
         },
         {
-            title: 'Soporte de ventas',
+            title: 'Asesor de Ciberseguridad',
             company: 'Siemens Mobility Argentina',
-            description: 'Desarrollo de presentaciones e investigaciones estrategicas. Soporte en generación de ofertas para licitaciones publicas.',
-            role: 'Desarrollador de probadores y soporte de ventas',
+            description:  
+                `
+                Trabajo en equipo responsable del mantenimiento de la confidencialidad, 
+                Integridad y disponibilidad (CIA triad) de la información corporativa.
+                Reportando al Jefe Regional de Ciberseguridad en USA, CEOs y CFOs Locales. 
+                Presentación de medidas de seguridad a toda la empresa en reuniones mensuales.
+                Análisis de riesgos y amenasas. Analisis de impacto y perdidas en caso de ciberataque.
+                Panificación, presentación e implementación de medidas de seguridad para 
+                prevenir y reducir dichos riesgos y amenazas. 
+                Gestión de Riesgos Residuales.
+                Coordinar Capacitaraciones sobre ciberseguridad.
+                `,
+            role: 'Rol de embajador de Ciberseguridad',
             startYear: 'Dic 2018',
             endYear: 'Mar 2020'
         },
         {
-            title: 'Proyecto Simulador de pasos a nivel',
+            title: 'Soporte de ventas y Diseñador de cajas de pruebas',
             company: 'Siemens Mobility Argentina',
-            description: 'Diseñe , Propuse y desarrolle un Simulador de pasos a Nivel para realizar presentaciones de ventas de los Productos de Siemens Mobility a sus Clientes.  ',
-            role: 'Pasante en el area de ventas',
+            description: 
+                `
+                Trabajo en pequeño equipo responsable de venta de tecnologia para 
+                licitaciones públicas Ferroviarias. Soporte para presentaciones 
+                de ventas. Diseño de Catálogos de Productos y soluciones. 
+                Diseño de whitepapers y Brochures. Comunicación en inglés 
+                con colaboradores repartidos por todo el mundo.
+
+                Planificar, desarrollar y presentar un proyecto 
+                de Simulador de Paso a Nivel con Controladores de 
+                Cruce de Siemens y tecnología PLC de Siemens. Fue una caja 
+                de prueba para mostrar a los clientes las funciones y la seguridad de 
+                los Controladores de cruce de Siemens Mobility.
+                `,
+            role: 'Pasante',
             startYear: 'Dic 2018',
             endYear: 'Mar 2020'
         }
@@ -334,18 +359,18 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                                     <div className={'about-extended-description'}>
                                         <p>
                                             Mi carrera comenzó hace 4 años en la industria de la tecnología 
-                                            ferroviaria en una empresa multinacional donde me profesionalicé 
-                                            en habilidades blandas y comunicación mientras aprendía sobre sus 
-                                            tecnologías. Allí aprendí a trabajar de forma remota con equipos
+                                            ferroviaria en una empresa multinacional donde me profesionalicé,  
+                                            aprendí habilidades blandas y comunicación mientras aprendía sobre sus 
+                                            tecnologías. Ahí aprendí a trabajar de forma remota con equipos
                                             distribuidos por todo el mundo utilizando el inglés como herramienta
                                             de comunicación.
                                         </p>
                                         <p>
-                                            En 2021, me mudé a la industria del desarrollo de software. 
-                                            Porque he estado estudiando software desde los 11 años. 
-                                            En mi primera experiencia de desarrollo, pude fusionar todo 
-                                            el conocimiento que había aprendido cuando era más joven 
-                                            con las metodologías que incorporé en ese trabajo.
+                                            En 2021, me cambié a la industria del desarrollo de software. 
+                                            Porque estudio programación desde los 11 años. 
+                                            En mi primera experiencia de desarrollo, pude combinar todo 
+                                            el conocimiento tecnico que había aprendido cuando era más joven 
+                                            con las metodología SCRUM y el trabajo en equipo con otros desarrolladores.
                                         </p>
                                     </div>
                                     :
