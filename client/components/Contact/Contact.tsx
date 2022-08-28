@@ -131,6 +131,8 @@ export class Contact extends React.Component<
                 max-width: 1200px;
                 margin: auto;
                 margin-top: 100px;
+                position: relative;
+                padding: 15px;
             }
             .contact-form{
                 background: #2b2b2b;
@@ -168,8 +170,7 @@ export class Contact extends React.Component<
                 border-radius: 8px;
             }
             .contact-field label input:focus{
-                border: none;
-                
+                border: 2px solid #FF004D;
             }
             .contact-field label{
                 z-index: 1;
@@ -196,6 +197,9 @@ export class Contact extends React.Component<
                 min-height: 200px;
                 max-height: 300px;
                 border-radius: 8px;
+            }
+            .contact-field label textarea:focus{
+                border: 2px solid #FF004D;
             }
             .submit-btn{
                 z-index: 1;
@@ -231,6 +235,10 @@ export class Contact extends React.Component<
                 padding: 10px;
                 color: #19F4D6;
                 font-size: 18px;
+            }
+            textarea:focus, input:focus{
+                outline: none;
+      
             }
             `;
         return (

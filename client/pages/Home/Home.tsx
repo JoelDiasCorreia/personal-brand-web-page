@@ -8,6 +8,7 @@ import { IoLogoCss3 } from "react-icons/io";
 import { SiFirebase, SiJavascript, SiMongodb, SiOracle, SiSwagger, SiTypescript } from "react-icons/si"
 import { BsTerminal } from "react-icons/bs";
 import { Stars } from "../../components/Stars/Stars";
+import { TbFileDownload } from "react-icons/tb";
 interface Skill {
     name: string,
     description: string
@@ -71,16 +72,15 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
                 align-content: center;
                 margin: auto;
                 max-width: 1200px;
+                margin-top: 140px;
             }
             .home-fist-card{
-                   margin: 25px;
-                   margin-top: 100px;
-                    padding: 15px;
-                    z-index: 10;
+                margin: 25px;
+                padding: 15px;
+                z-index: 10;
             }
             .home-h1{
                 font-size: 46px;
-                line-height: 30px;
             }
             .home-h1 strong{
                 color: #19F4D6;
@@ -88,7 +88,7 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
              .home-h2{
                 font-family: monospace;
             }
-            .home-cta-btn{
+            .cv-btn{
                 padding: 15px 25px;
                 background: #2D2E32;
                 color: #19F4D6;
@@ -96,12 +96,32 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
                 font-family: monospace;
                 font-size: 18px;
                 cursor: pointer;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                height: 55px;
+                -webkit-transition: all 0.15s ease-in;
+                -moz-transition: all 0.15s ease-in;
+                -o-transition: all 0.15s ease-in;
+                transition: all 0.15s ease-in;
+                text-decoration: none;
             }
-             .home-cta-btn:focus{
-                background: #47484B;
-                color: #19F4D6;
+            a{
+                text-decoration: none;
             }
-            .home-cta-btn:hover{
+            .cv-btn p{
+                text-decoration: none;
+                margin: 5px;
+            }
+            .cv-btn:hover{
+                color: #FF004D;
+                border: 2px solid #FF004D;
+                font-weight: 900;
+            }
+            .cv-btn:focus{
                 background: #47484B;
                 color: #19F4D6;
             }
@@ -142,7 +162,7 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
                 height: fit-content;
                 z-index: 10;
                 margin: auto;
-                padding: 15px;
+                padding: 0px;
                 
                 display: flex;
                 flex-wrap: wrap;
@@ -252,7 +272,7 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
         `;
         return (
             <div className={'home'}>
-            <Stars></Stars>
+                <Stars></Stars>
                 {/* <div className={'home-bkgnd-img'}> </div> */}
                 <div>
                     <div className={'first-impression-view'}>
@@ -265,12 +285,14 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
                                 Soy <strong>Joel</strong>,
                             </h1>
                             <h1 className={'home-h1'}>
-                                Desarrollador Fullstack
+                                Desarrollador Fullstack ssr
                             </h1>
-                            <h2 className={'home-h2'}>y diseñador UX/UI</h2>
+                            <h2 className={'home-h2'}>y diseñador UI jr.</h2>
                             <a href={'/assets/CV - Joel Dias Correia_compressed.pdf' } target="_blank">
-                                <button className={'home-cta-btn'}>
-                                    Ver mi CV
+                                
+                                <button className={'cv-btn'}>
+                                    <TbFileDownload size={28}></TbFileDownload> 
+                                    <p>Ver mi CV</p>
                                 </button>
                             </a>
 

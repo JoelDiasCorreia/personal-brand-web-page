@@ -1,5 +1,9 @@
 import * as React from "react";
 import { LanguageContext } from "../../contexts/language";
+import { Stars } from "../Stars/Stars";
+
+import { TbFileDownload } from 'react-icons/tb'
+
 interface Experience {
     title: string;
     company: string;
@@ -19,7 +23,7 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                 2 aplicaciones heredadas monolíticas en una aplicación de arquitectura 
                 de microservicios y su integración con otras aplicaciones en el entorno 
                 de TI del cliente.
-
+<
                 Desarrollo de interfaces con tecnología Angular a partir de prototipos realizados 
                 con Figma. Desarrollo de microservicios HTTP con Swagger sobre NodeJS y Spring Boot. 
                 Conexiones de microservicios a bases de datos Oracle PL/SQL. 
@@ -157,7 +161,8 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
     render(){
         const css = `
             .about{
-                margin-top: 200px
+                margin-top: 200px;
+                position: relative;
             }
             .about-card{
                 max-width: 1200px;
@@ -173,6 +178,7 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                 padding: 15px;
                 height: 400px;
                 width: 400px;
+                position: relative;
             }
             .about-picture img{
                 width: inherit;
@@ -183,10 +189,23 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                 padding: 15px;
                 max-width:700px;
             }
+            .about-extended-description{
+                padding: 15px;
+                display: flex;
+                max-width: 1200px;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                margin: auto;
+            
+            }
             .about-description h2 strong{
                 color: #19F4D6;
             }
-            .about-cv-btn{
+            a{
+                text-decoration: none;
+            }
+            .cv-btn{
                 padding: 15px 25px;
                 background: #2D2E32;
                 color: #19F4D6;
@@ -194,14 +213,31 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                 font-family: monospace;
                 font-size: 18px;
                 cursor: pointer;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                height: 55px;
+                -webkit-transition: all 0.15s ease-in;
+                -moz-transition: all 0.15s ease-in;
+                -o-transition: all 0.15s ease-in;
+                transition: all 0.15s ease-in;
+                text-decoration: none;
             }
-             .about-cv-btn:focus{
+            .cv-btn p{
+                text-decoration: none;
+                margin: 5px;
+            }
+             .cv-btn:focus{
                 background: #47484B;
                 color: #19F4D6;
             }
-            .about-cv-btn:hover{
-                background: #47484B;
-                color: #19F4D6;
+            .cv-btn:hover{
+                color: #FF004D;
+                border: 2px solid #FF004D;
+                font-weight: 900;
             }
             .experiences{
                 max-width: 1200px;
@@ -212,6 +248,7 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
             .experiences-list{
                 max-width: 1200px;
                 padding: 15px;
+                position: relative;
             }
             .experience{
                 background: #2b2b2b;
@@ -236,16 +273,20 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
         `;
         return (
             <div className={'about'}>
+                <Stars></Stars>
                 <style>
                     {css}
                 </style>
+                
                 <LanguageContext.Consumer>
+                    
                     {
                         ({lang, switchLang}) => (
                             <div>
                                 <div className={'about-card'}>
                                 <div className={'about-picture'}>
                                     <img alt={"foto de Joel"} src={'/assets/joel.jpg'} />
+                              
                                 </div>
                                 {
                                     lang === 'ES' ?
@@ -257,11 +298,12 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                                             Me especializo en desarrollo de software y diseño UX/UI.
                                         </p>
                                         <p>
-                                            Espero desarrollarme en la industria de TI como ingeniero de software y diseñador de productos.
+                                            Aspiro a desarrollarme en la industria de IT como ingeniero de software y diseñador de productos.
                                         </p>
                                         <a href={'/assets/CV - Joel Dias Correia_compressed.pdf' } target="_blank">
-                                            <button className={'about-cv-btn'}>
-                                                Ver mi CV
+                                            <button className={'cv-btn'}>
+                                                <TbFileDownload size={28}></TbFileDownload>
+                                                <p>Ver mi CV</p>
                                             </button>
                                         </a>
                                     </div>
@@ -279,7 +321,7 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                                         I look forward to developing myself in the IT industry as a software engineer and product designer.
                                     </p>
                                     <a href={'/assets/CV - Joel Dias Correia_compressed.pdf' } target="_blank">
-                                        <button className={'about-cv-btn'}>
+                                        <button className={'cv-btn'}>
                                             Download my CV
                                         </button>
                                     </a>
@@ -289,7 +331,7 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                             </div>
                             {
                                     lang === 'ES' ?
-                                    <div className={'about-description'}>
+                                    <div className={'about-extended-description'}>
                                         <p>
                                             Mi carrera comenzó hace 4 años en la industria de la tecnología 
                                             ferroviaria en una empresa multinacional donde me profesionalicé 
@@ -307,7 +349,7 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                                         </p>
                                     </div>
                                     :
-                                    <div className={'about-description'}>
+                                    <div className={'about-extended-description'}>
                                         <p>
                                             My career started 4 years ago on the railway technology industry 
                                             at a multinational company where I got professional on soft-skills and 

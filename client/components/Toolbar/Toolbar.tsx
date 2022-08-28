@@ -2,26 +2,27 @@ import * as React from "react";
 import {Link} from "react-router-dom";
 import {BsGithub, BsLinkedin} from "react-icons/bs";
 import { LanguageContext } from "../../contexts/language";
+import { AiOutlineMenu } from "react-icons/ai";
 
 export const Toolbar = (changeLanguage: any) => {
     const css =`
             .toolbar{
-                    position: fixed;
-                    background: #2D2E32;
-                    max-width: 100%;
-                    padding: auto;
-                    display: flex;
-                    width: 100%;
-                    align-content: center;
-                    align-items: center;
-                    flex-wrap: nowrap;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    border-bottom: 3px solid #47484B;
-                    z-index: 20;
-                    top: 0px;
-                    left: 0px;
-                }
+                position: fixed;
+                background: #2D2E32;
+                max-width: 98%;
+                display: flex;
+                width: 100%;
+                align-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: space-between;
+                border-bottom: 3px solid #47484B;
+                z-index: 20;
+                top: 0px;
+                left: 0px;
+                padding: 0px 14px;
+            }
             .toolbar-btn{
                 border: none;
                 background: none;
@@ -32,6 +33,10 @@ export const Toolbar = (changeLanguage: any) => {
                 padding: 5px;
                 font-size: 18px;
                 border-bottom: 2px solid trasparent;
+                -webkit-transition: all 200ms ease-in;
+                -moz-transition: all 200ms ease-in;
+                -o-transition: all 200ms ease-in;
+                transition: all 200ms ease-in;
             }
             .toolbar-btn:hover{
                 color: #19F4D6;
@@ -58,6 +63,87 @@ export const Toolbar = (changeLanguage: any) => {
             #button-lang-switcher img{
                 height: inherit;
             }
+
+            #menu{
+                display: none;
+            }
+            
+            #menu ul li {
+                background-color: #2D2E32;
+            }
+            
+            #menu ul {
+              list-style:none;
+              margin:0;
+              padding:0;
+              background-color: #2D2E32;
+            }
+            
+            #menu ul a {
+              display:block;
+              color:#fff;
+              text-decoration:none;
+              font-weight:400;
+              font-size:15px;
+              padding:10px;
+              font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+              text-transform:uppercase;
+              letter-spacing:1px;
+            }
+            
+            #menu ul li {
+              position:relative;
+              float:left;
+              margin:0;
+              padding:0;
+            }
+            
+            #menu ul ul {
+              display:none;
+              position:absolute;
+              top:100%;
+              right:0;
+              padding:0;
+            }
+            
+            #menu ul ul li {
+              float:none;
+              width:150px
+            }
+            
+            #menu ul ul a {
+              line-height:120%;
+              padding:10px 15px;
+            }
+            
+            #menu ul li:hover > ul {
+              display:block;
+              border: 2px solid #19F4D6;
+            }
+            @media (max-width: 1200px) {
+                .menu-md-lg-xl {
+                  display: block;
+                }
+                #menu{
+                    display: none;
+                }
+            }
+            @media (max-width: 768px ) {
+                #menu{
+                    display: block;
+                }
+                .menu-md-lg-xl {
+                    display: none;
+                }
+            }
+            .logo{
+                color: #19F4D6;
+                text-decoration: none;
+            }
+            .logo:hover {
+                color: #FF004D;
+                cursor: pointer;
+            }
         `;
     // const switchLanguage = () => {
     //     if(lang === 'EN'){
@@ -75,9 +161,32 @@ export const Toolbar = (changeLanguage: any) => {
                         {css}
                     </style>
                     <nav>
-                        <h1>{'<Joel Dias Correia/>'}</h1>
+                        <Link to="/" className="logo">
+                            <h1 >{'<Joel Dias Correia/>'}</h1>
+                        </Link>
                     </nav>
-                    <nav>
+                    <nav id="menu">
+                        <ul>
+                            <li>
+                                <a href="#"><AiOutlineMenu size={28}></AiOutlineMenu></a>
+                                <ul>
+                                    <Link to="/">
+                                        <li><a href="#" className="toolbar-btn">Inicio</a></li>
+                                    </Link>
+                                    <Link to="/about">
+                                        <li><a href="#" className="toolbar-btn">Sobre Mi</a></li>
+                                    </Link>
+                                    <Link to="/services">
+                                        <li><a href="#" className="toolbar-btn">Servicios</a></li>
+                                    </Link>
+                                    <Link to="/contact">
+                                        <li><a href="#" className="toolbar-btn">Contacto</a></li>
+                                    </Link>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav className="menu-md-lg-xl">
                         <Link to="/">
                             <button className={'toolbar-btn'}>
                                 {
@@ -107,7 +216,7 @@ export const Toolbar = (changeLanguage: any) => {
                             </button>
                         </Link>
                     </nav>
-                    <nav>
+                    <nav className="menu-md-lg-xl">
 
                         <a href={'https://www.linkedin.com/in/joeldiascorreia'}  target="_blank">
                             <button className={'toolbar-btn'}>
@@ -123,7 +232,7 @@ export const Toolbar = (changeLanguage: any) => {
                                 GitHub
                             </button>
                         </a>
-                        <a >
+                        {/* <a >
                             <button  onClick={switchLang} id="button-lang-switcher">
                                 { 
                                     lang == 'ES' ? 
@@ -132,7 +241,7 @@ export const Toolbar = (changeLanguage: any) => {
                                         <img src="assets/ES.jpeg" alt="spanish Flag" height={'30px'} />
                                 }
                             </button>
-                        </a>
+                        </a> */}
                     </nav>
 
                     </div>

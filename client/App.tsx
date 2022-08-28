@@ -7,8 +7,9 @@ import {Contact} from "./components/Contact/Contact";
 import {Footer} from "./components/Footer/Footer";
 import {About} from "./components/About/About";
 import { LanguageContext } from "./contexts/language";
+import { Stars } from "./components/Stars/Stars";
 export default function App() {
-    const [isLanguage, setLanguage] = React.useState('EN');
+    const [isLanguage, setLanguage] = React.useState('ES');
     const css = `
         body{
             background: #2D2E32;
@@ -27,6 +28,9 @@ export default function App() {
             line-height: 30px;
             font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
         }
+        #stars-container{
+            color: blue;
+        }
     `;
 
     const switchLanguage = () => {
@@ -43,13 +47,14 @@ export default function App() {
             {/* Routes nest inside one another. Nested route paths build upon
             parent route paths, and nested route elements render inside
             parent route elements. See the note about <Outlet> below. */}
-
+  
         <LanguageContext.Provider value={
                 {
                     lang: isLanguage,
                     switchLang: switchLanguage,
                 }
             }>
+                
             <Routes>
                     <Route path="/" element={<Layout />}>
                         

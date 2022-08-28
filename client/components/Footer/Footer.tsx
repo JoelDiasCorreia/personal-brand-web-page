@@ -7,6 +7,10 @@ export function Footer(){
             .footer{
                 background: #2b2b2b;
                 z-index: 1;
+                position: relative;
+                min-height: 370px;
+                padding: 15px;
+                border-top: 2px solid #19F4D6;
             }
             .footer-pagemap-btn{
                 font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
@@ -15,17 +19,16 @@ export function Footer(){
                 background: #2b2b2b;
                 color: #19F4D6;
                 cursor: pointer;
-                border: 2px solid #2D2E32;
+                border: none;
                 -webkit-transition: all 0.15s ease-in;
                 -moz-transition: all 0.15s ease-in;
                 -o-transition: all 0.15s ease-in;
                 transition: all 0.15s ease-in;
                 font-size: 20px;
-        
+                
             }
             .footer-pagemap-btn:hover{
-                border: 2px solid #FF004D;
-                color:  #FF004D;
+                border-bottom: 2px solid #FF004D;
 
             }
             .footer-flex-horizontal-wrap{
@@ -43,7 +46,6 @@ export function Footer(){
             <style>
                 {css}
             </style>
-            <hr></hr>
             <div className={'footer-flex-horizontal-wrap'}>
                 <h1> Joel Dias Correia </h1>
             </div>
@@ -96,10 +98,6 @@ export function Footer(){
                     </a>
                 </div>
             </div>
-            <div className={'footer-flex-horizontal-wrap'}>
-                <p>Copyright 2022 - Descargo Legal - Terminos y condiciones - Acuerdo de privacidad</p>
-            </div>
-
         </div>
     )
 }
