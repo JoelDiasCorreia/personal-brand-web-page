@@ -11,8 +11,8 @@ import {ContactFormBody} from "./models/contactFormBody";
 
 const server = express();
 
-server.listen( process.env.PORT || 4200, () => {
-    console.log(`Server running on http://localhost:${process.env.PORT || 4200}`);
+server.listen( process.env.PORT || 80 , () => {
+    console.log(`Server running on http://localhost:${process.env.PORT || 80 }`);
 })
 server.set('view engine', 'ejs')
 server.set('views', path.join(__dirname, 'views'));
