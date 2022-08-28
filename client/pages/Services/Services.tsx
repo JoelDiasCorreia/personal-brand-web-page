@@ -13,7 +13,7 @@ export class Services extends React.Component<any, { services:Service[],rendered
             rendered: false,
             services:[
                 {
-                    picture:'/assets/undraw_programming.svg',
+                    picture:'/assets/undraw_group_video.svg',
                     description:'Consultoria para el desarollo, actualización de paginas web.',
                     title:'Consultoria Web',
                 },
@@ -23,7 +23,7 @@ export class Services extends React.Component<any, { services:Service[],rendered
                     title:'Desarrollo de Pagina Web',
                 },
                 {
-                    picture:'/assets/undraw_programming.svg',
+                    picture:'/assets/undraw_responsive.svg',
                     description:'Diseño, Desarrollo y puesta en producción de Aplicaciones',
                     title:'Desarrollo de Aplicaciones',
                 },
