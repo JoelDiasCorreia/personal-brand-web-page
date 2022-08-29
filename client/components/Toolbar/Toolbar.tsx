@@ -65,6 +65,7 @@ export const Toolbar = (changeLanguage: any) => {
             }
 
             #menu{
+                margin-right: 10px;
                 display: none;
             }
             

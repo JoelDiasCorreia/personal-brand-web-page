@@ -142,7 +142,7 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                 margin: auto;
             
             }
-            .about-description h2 strong{
+            .about-description h1 strong{
                 color: #19F4D6;
             }
             a{
@@ -185,7 +185,7 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
             .experiences{
                 max-width: 1200px;
                 margin: auto;
-                padding: 15px;
+                padding: 0px;
             }
             
             .experiences-list{
@@ -199,7 +199,7 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                 border: 2px solid #19F4D6;
                 max-width: 1200px;
                 margin: auto;
-                padding: 40px;
+                padding: 15px 30px;
                 margin: 15px;
             }
              .experience h2{
@@ -234,8 +234,7 @@ export class About extends React.Component<any, {experiencies:Experience[] }>{
                                 {
                                     lang === 'ES' ?
                                     <div className={'about-description'}>
-                                        <h1>Sobre mi</h1>
-                                        <h2> Mi nombre es  <strong>Joel Dias Correia</strong>. </h2>
+                                        <h1> Mi nombre es  <strong>Joel Dias Correia</strong>. </h1>
                                         <p>
                                             Me apasiona resolver problemas de negocios a través de la tecnología. 
                                             Me especializo en desarrollo de software y diseño UX/UI.

@@ -81,6 +81,7 @@ export class Home extends React.Component<any, { skills:Skill[] }>{
             }
             .home-h1{
                 font-size: 46px;
+                margin: 5px;
             }
             .home-h1 strong{
                 color: #19F4D6;
