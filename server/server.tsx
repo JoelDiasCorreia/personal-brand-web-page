@@ -33,6 +33,12 @@ server.get('/sitemap.xml', (req:any, res:any) => {
     res.sendFile(path.join(__dirname, 'static/assets/sitemap.xml'));
 })
 
+
+server.get('/google41a619dd2c562c55.html', (req:any, res:any) => {
+    res.sendFile(path.join(__dirname, 'static/assets/google41a619dd2c562c55.html'));
+})
+
+
 server.get('/*', (req:any, res:any) => {
     const component = ReactDOMServer.renderToString(
         <StaticRouter location={req.url}>
